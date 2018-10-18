@@ -30,3 +30,107 @@
     transform: rotate(360deg);
   }
 }
+
+.message{
+  color: red;
+}
+
+.pesan .header {
+  background-color: #ff4d4d;
+  padding: 10px;
+  color: white;
+}
+
+.inputchat {
+  background-color:#ff3333;
+  padding-bottom: 10px;
+}
+
+.inputchat button {
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  margin-top: -40px;
+  font-size: 25px;
+}
+
+.inputchat textarea {
+  margin-top: 10px;
+  background: #fbfbfb;
+  width: 75%;
+  margin-left: 15%;
+  height: 50px;
+  border: 2px solid #eee;
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+  resize: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  color: #333;
+}
+
+.pesan textarea::-webkit-scrollbar {
+  width: 3px;
+  margin-right: 10px;
+}
+
+.pesan textarea::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: lightgray;
+}
+
+.pesan textarea:focus {
+  background: #fff;
+}
+
+.box {
+  background-color: lightcyan;
+  width: 100%;
+  height: 530px;
+  padding: 10px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.box::-webkit-scrollbar {
+  width: 7px;
+}
+
+.box::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: lightgray;
+}
+
+.right {
+  text-align: left;
+  float: right;
+  background-color: lightgreen;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.left {
+  text-align: left;
+  float: left;
+  background-color: lightblue;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+
+.mine {
+  text-align: right;
+  color: blue;
+}
+
+.chatbox {
+  padding: 10px 20px;
+  clear: both;
+  margin-bottom: 5px;
+  max-width: 80%;
+}
+
+.box textarea button {
+  float: right;
+}
