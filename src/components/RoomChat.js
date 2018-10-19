@@ -23,22 +23,19 @@ class RoomChat extends Component {
         })
     }
 
-    hubungi(user) {
-        this.setState({ user })
-    }
+
 
     render() {
         return (
             <div className="row">
-                <div className="col-4">
+                <div className="">
                 { this.state.users.map(user=>{
                     return(
                        <div>
-                           <a onClick={()=>this.hubungi(user)}>{user.email}</a>
                             <Link to={{
                                 pathname: `user/${user.uid}`,
                                 state: { user }
-                            }}><p>{user.email}</p></Link>
+                            }}><h4 className="list-group-item mb-2 shadow">{user.email}</h4></Link>
                        </div>
                     )
                 }) 

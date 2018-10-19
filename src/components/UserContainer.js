@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from './home/Header';
 import { dbfirebase } from '../firebase';
 import { Redirect } from 'react-router-dom';
+import ReactDOM from 'react-dom';
 
 class UserContainer extends Component {
     state={
@@ -13,17 +14,23 @@ class UserContainer extends Component {
     componentWillMount(){
         const user = dbfirebase.auth().currentUser;
         if(user) {
-            console.log(user)
             this.setState({  email: user.email, uid: user.uid })
         }    
     }
 
-    componentDidMount() {
-        this.listChat()
+    componentDidUpdate(){
+        this.scrollToBottom()
     }
 
-    roomChat=(user1)=> {
+    componentDidMount() {
+        if(this.state.uid){
+            this.listChat()
+        }
+    }
 
+    scrollToBottom =()=>{
+        const pesanTerakhir = ReactDOM.findDOMNode(this.pesanTerakhir)
+         pesanTerakhir.scrollIntoView()
     }
 
     handleInputChange=(e)=> {
@@ -55,10 +62,11 @@ class UserContainer extends Component {
 
     render() {
         if(!this.props.match.params.id){return<Redirect to='/' />}
+        if(!this.state.uid){return<Redirect to='/' />}
         return (
             <div className="pesan">
-                <div className="header">
-                   <h3>{this.props.location.state.user.author}</h3>
+                <div className="header container">
+                   <h3>{this.props.location.state.user.author || this.props.location.state.user.email }</h3>
                 </div>
                 <div className="box">
                 {
@@ -68,9 +76,7 @@ class UserContainer extends Component {
                         </div>
                         )
                 }
-                
-                </div>
-                <div className="inputchat">
+                <div ref={element=>{this.pesanTerakhir = element}} className="inputchat">
                     <textarea
                         onChange={this.handleInputChange}
                         value={this.state.pesan}
@@ -81,6 +87,7 @@ class UserContainer extends Component {
                         >
                         kirim
                     </button>
+                </div>
                 </div>
             </div>
         );
