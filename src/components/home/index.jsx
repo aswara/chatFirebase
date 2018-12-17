@@ -7,15 +7,17 @@ class index extends Component {
     state ={
         user: ''
     }
+
     componentDidMount() {
         dbfirebase.auth().onAuthStateChanged((user) => {
             if (user) {
             this.setState({ user });
             } else {
-            console.log('belum masuk')
+            this.props.history.push('/login')
             }
         });
     }
+
     render() {
         return (
             <div className="home">
