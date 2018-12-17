@@ -25,8 +25,7 @@ class ChatContainer extends Component {
 
 
     scrollToBottom =()=>{
-        const pesanTerakhir = ReactDOM.findDOMNode(this.pesanTerakhir)
-        pesanTerakhir.scrollIntoView()
+        this.messageEnd.scrollIntoView({ behavior: 'smooth' })
     }
 
     componentDidUpdate() {
@@ -113,6 +112,7 @@ class ChatContainer extends Component {
                         </div>
                     ) )
                 }
+                <div ref={(el)=>{ this.messageEnd = el }} className="bottom"></div>
                     <div ref={element=>{this.pesanTerakhir = element}} className="inputchat">
                         <input
                         onChange={this.handleInputChange}

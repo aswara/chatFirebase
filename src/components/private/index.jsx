@@ -29,8 +29,7 @@ class UserContainer extends Component {
     }
 
     scrollToBottom =()=>{
-        const pesanTerakhir = ReactDOM.findDOMNode(this.pesanTerakhir)
-         pesanTerakhir.scrollIntoView()
+        this.messageEnd.scrollIntoView({ behavior: 'smooth' })
     }
 
     handleInputChange=(e)=> {
@@ -80,6 +79,7 @@ class UserContainer extends Component {
                         </div>
                         )
                 }
+                <div ref={(el)=>{ this.messageEnd = el }} className="bottom"></div>
                 <div ref={element=>{this.pesanTerakhir = element}} className="inputchat">
                     <input
                         onChange={this.handleInputChange}

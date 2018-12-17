@@ -29,20 +29,36 @@
 }
 
 .inputchat input {
-    width: 80%;
+    width: 25%;
     padding-left: 10px;
     font-size: 16px;
     height: 35px;
     border-radius: 50px;
     outline: none;
-    margin-left: 5px;
+    right: 60px;
+    bottom: 10px;
+    position: absolute;
     border: none;
     box-shadow: 0px 5px 10px lightgray;
+    animation: input 1.5s ease-in-out;
+    transition: 1s;
+}
+
+@keyframes input {
+    0%{
+        right: 300px;
+    }
+    100%{
+        right: 60px;
+    }
+}
+
+.inputchat input:focus {
+    width: 80%;
 }
 
 .inputchat button { 
     cursor: pointer;
-    top: 0px;
     position: absolute;
     right: 15px;
     border-radius: 20px;
@@ -81,7 +97,7 @@
     border-radius: 20px;
     background-color: #4C9DFA;
     color: white; 
-    border-radius: 10px 0px 10px 10px;
+    border-radius: 20px 0px 20px 20px;
     padding: 3px 10px;
     box-shadow: 0px 5px 10px lightgray;
 
@@ -99,6 +115,7 @@
     margin-bottom: 10px;
 }
 
+
 .left .message {
     display: flex;
     flex-direction: column;
@@ -110,10 +127,9 @@
 .left .message .text {
     text-align: left; 
     right: 0;
-    border-radius: 20px;
     background-color: #40C973;
     color: white; 
-    border-radius: 0px 10px 10px 10px;
+    border-radius: 0px 20px 20px 20px;
     padding: 3px 10px;
     box-shadow: 0px 5px 10px lightgray;
 }

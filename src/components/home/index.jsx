@@ -21,9 +21,13 @@ class index extends Component {
     render() {
         return (
             <div className="home">
+                <div className="a"><span>. . . . . . . . . .</span></div>
+                <div className="b"><span>. . . . . . . . . .</span></div>
                 <div className="wrapper">
                     <Link style={{ textDecoration: 'none' }} to="/public"><div className="public">Publik</div></Link>
                     <Link style={{ textDecoration: 'none' }} to="/private"><div className="private">Pribadi</div></Link>
+                    <Link style={{ textDecoration: 'none' }} to="/login"><div className="public">Masuk</div></Link>
+                    <Link style={{ textDecoration: 'none' }} to="/signup"><div className="private">Daftar</div></Link>
                 </div>
             </div>
         );
