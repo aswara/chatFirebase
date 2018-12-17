@@ -1,0 +1,127 @@
+.private {
+    max-width: 400px;
+    margin: 0px auto;
+    border-radius: 10px;
+    position: relative;
+}
+
+.private .header {
+    top: 0;
+    max-width: 400px;
+    width: 100%;
+    z-index: 10;
+    color: white;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    background-image: linear-gradient( #4C9DFA,#3E7CED);
+    box-shadow: 0px 2px 5px lightgray;
+
+}
+
+.inputchat {
+    position: fixed;
+    bottom: 5px;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+}
+
+.inputchat input {
+    width: 80%;
+    padding-left: 10px;
+    font-size: 16px;
+    height: 35px;
+    border-radius: 50px;
+    outline: none;
+    margin-left: 5px;
+    border: none;
+    box-shadow: 0px 5px 10px lightgray;
+}
+
+.inputchat button { 
+    cursor: pointer;
+    top: 0px;
+    position: absolute;
+    right: 15px;
+    border-radius: 20px;
+    box-shadow: 0px 2px 2px lightgray;
+    background-color: #40C973;
+    color: white;
+    border: none;
+    margin-left: 5px;
+    height: 37px;
+    width: 37px;
+    bottom: 10px;
+}
+
+.box {
+    margin-left: 5px;
+    margin-right: 5px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 40px;
+    margin-top: 55px;
+}
+
+
+.right .message {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: right; 
+}
+
+.right .message .text {
+    text-align: left; 
+    right: 0;
+    border-radius: 20px;
+    background-color: #4C9DFA;
+    color: white; 
+    border-radius: 10px 0px 10px 10px;
+    padding: 3px 10px;
+    box-shadow: 0px 5px 10px lightgray;
+
+}
+
+.right .message .text::after {
+    background-color: #4C9DFA;
+    height: 10px;
+    width: 10px;
+}
+
+.right {   
+  width: 70%;
+  margin-left: 30%;
+    margin-bottom: 10px;
+}
+
+.left .message {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: right; 
+}
+
+.left .message .text {
+    text-align: left; 
+    right: 0;
+    border-radius: 20px;
+    background-color: #40C973;
+    color: white; 
+    border-radius: 0px 10px 10px 10px;
+    padding: 3px 10px;
+    box-shadow: 0px 5px 10px lightgray;
+}
+
+.left {
+  text-align: left;
+  float: left;
+  margin-bottom: 30px;
+  width: 80%;
+}
+

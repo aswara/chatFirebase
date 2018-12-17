@@ -6,6 +6,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #F7F7F7;
+  max-width: 400px;
+  position: relative;
+  margin: 0 auto;
 }
 
 code {

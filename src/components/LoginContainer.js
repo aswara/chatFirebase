@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { dbfirebase } from '../firebase';
 import { Link } from 'react-router-dom';
-import login from '../drawing.svg';
 
 
 class LoginContainer extends Component {
@@ -43,35 +42,32 @@ class LoginContainer extends Component {
 
     render() {
         return (
-            <div className="row login pt-5">
-                <div className="col-md-7">
-                    <img className="img-fluid" src={login} />
-                </div>
-                <div className="col-md-5">
-                    <div className="mt-5 shadow login-form bg-light">
-                    <h3>Login</h3>
-                    <p>{this.state.error}</p>
+            <div className="login">
+                <div>
+                    <div className="login-form">
+                    <h1>Masuk Akun</h1>
+                    <span>{this.state.error}</span>
+                    <label>Email</label>
                     <input
                     type="text"
                     name="email"
-                    className="form-control"
+                    className="email"
                     onChange={this.handleChange}
                     value={this.state.email}
-                    placeholder="Masukan Email"
                     />
+                    <label>Password</label>
                     <input
                     type="password"
                     name="password"
-                    className="form-control"
+                    className="password"
                     onChange={this.handleChange}
                     value={this.state.pasword}
-                    placeholder="Masukan Password"
                     />
                     
-                    <button className="btn btn-primary" onClick={this.handleSubmit}>Login</button>
+                    <button className="btn btn-primary" onClick={this.handleSubmit}>Masuk</button>
                     <br/>
-                    Belum punya akun ? 
-                    <Link to={'signup'} >Daftar</Link>
+                    <p>Belum punya akun ? <Link style={{ textDecoration: 'none', color: '#453a9', fontWeight: '500'  }} to={'signup'} >Daftar</Link> </p>
+                    
                     </div>
                 </div>
             </div>
