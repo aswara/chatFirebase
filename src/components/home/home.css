@@ -1,101 +1,42 @@
-.home {
+.home img {
+    width: 50%;
+    margin: 30px auto;
+}
 
+.home h1 {
+    margin-top: 0px;
+    text-align: center;
+    color: #4C9DFA;
+}
+
+.home {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .home .wrapper {
-    margin-top: 200px;
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
     justify-items: center;
 }
 
-.home .a {
-    background-image: linear-gradient(#4C9DFA, #918ace);
-    color: white;
-    text-align: center;
-    width: 80%;
-    font-weight: 500;
-    font-size: 40px;
-    padding: 5px;
-    box-shadow: 0px 10px 5px lightgrey;
-    border-radius: 0 30px 30px;
-    margin-bottom: 20px;
-    position: absolute;
-    left: 5px;
-    top: -80px;
-    animation: a 1s ease-in-out;
-}
-
-@keyframes a {
-    0%{
-        left: -500px;
-    }
-    75%{
-        left: 20px;
-    }
-    100%{
-        left: 5px;
-    }
-}
-
-.home span {
-    animation: span 1.5s ease-in-out infinite;
-}
-
-@keyframes span {
-    0%{
-        opacity: 0;
-    }
-    50%{
-       opacity: 1;
-    }
-    100%{
-        opacity: 0;
-    }
-}
-
-.home .b {
-
-    right: 5px;
-    top: -150px;
-    position: absolute;
-    background-color: #50CA71;
-    /* background-image: linear-gradient(#4C9DFA, #918ace); */
-    color: white;
-    text-align: center;
-    width: 80%;
-    font-weight: 500;
-    font-size: 40px;
-    padding: 5px;
-    box-shadow: 0px 10px 5px lightgrey;
-    border-radius: 30px 0px 30px 30px;
-    animation: b 1s ease-in-out;
-}
-
-@keyframes b {
-    0%{
-        right: -500px;
-    }
-    75%{
-        right: 20px;
-    }
-    100%{
-        right: 5px;
-    }
-}
 
 .home .public {
-    /* background-image: linear-gradient(#4C9DFA, #918ace); */
-    background-color: #50CA71;
+    background-image: linear-gradient(#4C9DFA, #918ace);
+    /* background-color: white; */
     color: white;
     text-align: center;
     width: 80%;
     font-weight: 500;
-    font-size: 22px;
+    font-size: 18px;
     padding: 5px;
     box-shadow: 0px 10px 5px lightgrey;
-    border-radius: 30px;
+    border-radius: 3px;
     margin-bottom: 20px;
+    margin-left: 10px;
+    cursor: pointer;
 }
 
 .home .private {
@@ -104,9 +45,11 @@
     text-align: center;
     width: 80%;
     font-weight: 500;
-    font-size: 22px;
+    font-size: 18px;
     padding: 5px;
     box-shadow: 0px 10px 5px lightgrey;
-    border-radius: 30px;
+    border-radius: 3px;
     margin-bottom: 20px;
+    margin-right: 10px;
+    cursor: pointer;
 }

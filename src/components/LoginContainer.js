@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import { dbfirebase } from '../firebase';
 import { Link } from 'react-router-dom';
-
+import Loading from './loading'
 
 class LoginContainer extends Component {
     state = {
         email: '',
         password: '',
-        error: ''
+        error: '',
+        loading : false
     }
 
     handleChange =(e)=> {
@@ -26,13 +27,14 @@ class LoginContainer extends Component {
     }
 
     login() {
+        this.setState({ loading: true })
         const { email, password } = this.state
         dbfirebase.auth().signInWithEmailAndPassword(email,password)
         .then(res => {
             this.onLogin()
         })
         .catch(err => {
-            console.log(err)
+            this.setState({ error : 'gagal masuk', loading: false })
         })
     }
 
@@ -43,10 +45,11 @@ class LoginContainer extends Component {
     render() {
         return (
             <div className="login">
+            { this.state.loading ? <Loading /> : '' }
                 <div>
                     <div className="login-form">
                     <h1>Masuk Akun</h1>
-                    <span>{this.state.error}</span>
+                    <span style={{ color: 'red' }}>{this.state.error}</span>
                     <label>Email</label>
                     <input
                     type="text"

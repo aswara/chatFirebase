@@ -9,7 +9,14 @@ import { Switch, Route, Redirect } from 'react-router-dom'
 import UserContainer from './components/private'
 
 class App extends Component {
-
+  componentDidMount() {
+    const element = document.getElementById('startingLoader')
+    window.onload = () => {
+      if(element) {
+        element.remove()
+      }
+    }
+  }
 
   render() {
     return (

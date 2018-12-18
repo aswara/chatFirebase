@@ -1,0 +1,61 @@
+#Loader {
+    background-color: white;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;
+    z-index: 100;
+    opacity: 0.8;
+  }
+
+  #Loader div {
+    margin: 150px auto;
+  }
+
+  #Loader .c1 {
+    height: 50px;
+    width: 50px;
+    background-color:#4694fc;
+    border-radius: 50%;
+    animation: circle1 1.5s ease-in-out infinite;
+    position: absolute;
+    left: 40%;
+    right: 40%;
+  }
+
+  @keyframes circle1 {
+    0%{
+      top: 0;
+    }
+    50%{
+      top: 100px;
+    }
+    100%{
+      top: 0px;
+    }
+  }
+
+    #Loader .c2 {
+    height: 50px;
+    width: 50px;
+    background-color:#4694fc;
+    border-radius: 50%;
+    animation: circle2 1.5s ease-in-out infinite;
+    position: absolute;
+    left: 40%;
+    right: 40%;
+  }
+
+  @keyframes circle2 {
+    0%{
+      top: 100px;
+    }
+    50%{
+      top: 0px;
+    }
+    100%{
+      top: 100px;
+    }
+  }
